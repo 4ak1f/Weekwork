@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int sum = 0, max, min;
+    float average;
+
+    // Ask the user for the number of elements
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n]; // Declare an array with size n
+
+    // Input elements into the array
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Initialize max and min with the first element
+    max = min = arr[0];
+
+    // Calculate sum, find max and min
+    for (i = 0; i < n; i++) {
+        sum += arr[i];
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+
+    // Calculate average
+    average = (float)sum / n;
+
+    // Output the results
+    printf("Sum: %d\n", sum);
+    printf("Average: %.2f\n", average);
+    printf("Maximum: %d\n", max);
+    printf("Minimum: %d\n", min);
+
+    return 0;
+}
