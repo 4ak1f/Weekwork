@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int num, sum = 0, remainder;
+
+    // Ask the user for input
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    // Process to calculate the sum of the digits
+    while (num != 0) {
+        remainder = num % 10;   // Get the last digit
+        sum += remainder;       // Add the digit to the sum
+        num /= 10;              // Remove the last digit
+    }
+
+    // Output the result
+    printf("Sum of the digits: %d\n", sum);
+
+    return 0;
+}
