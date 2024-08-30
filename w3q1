@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int binaryNum, decimalNum = 0, base = 1, remainder;
+
+    // Ask the user for input
+    printf("Enter a binary number: ");
+    scanf("%d", &binaryNum);
+
+    // Process to convert binary to decimal
+    while (binaryNum > 0) {
+        remainder = binaryNum % 10;          // Get the last digit (0 or 1)
+        decimalNum += remainder * base;      // Add the value to the decimal number
+        binaryNum /= 10;                     // Remove the last digit
+        base *= 2;                           // Move to the next power of 2
+    }
+
+    // Output the result
+    printf("Decimal equivalent: %d\n", decimalNum);
+
+    return 0;
+}
