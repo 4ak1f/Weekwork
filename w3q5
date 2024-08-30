@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+// Function to calculate the HCF using the Euclidean algorithm
+int calculateHCF(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+// Function to calculate the LCM
+int calculateLCM(int a, int b, int hcf) {
+    return (a * b) / hcf;
+}
+
+int main() {
+    int num1, num2, hcf, lcm;
+
+    // Ask the user for input
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);
+
+    // Calculate the HCF
+    hcf = calculateHCF(num1, num2);
+
+    // Calculate the LCM using the HCF
+    lcm = calculateLCM(num1, num2, hcf);
+
+    // Output the result
+    printf("HCF of %d and %d: %d\n", num1, num2, hcf);
+    printf("LCM of %d and %d: %d\n", num1, num2, lcm);
+
+    return 0;
+}
