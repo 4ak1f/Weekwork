@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-#define MAX 100 // Define the maximum size of the array
-
 void bubbleSort(int arr[], int n) {
     int i, j, temp;
     for (i = 0; i < n - 1; i++) {
@@ -18,15 +16,15 @@ void bubbleSort(int arr[], int n) {
 
 int main() {
     int n, i;
-    int array[MAX];
+    int array[100];
 
     // Ask the user for the number of elements
     printf("Enter the number of elements in the array: ");
     scanf("%d", &n);
 
     // Ensure the number of elements does not exceed the maximum size
-    if (n > MAX) {
-        printf("Error: Number of elements exceeds maximum allowed (%d).\n", MAX);
+    if (n > 100) {
+        printf("Error: Number of elements exceeds maximum allowed (%d).\n", 100);
         return 1;
     }
 
