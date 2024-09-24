@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the number of processes: ");
+    scanf("%d", &n);
+
+    int burst[n], waiting[n], turnaround[n];
+    
+    for (int i = 0; i < n; i++) {
+        printf("Enter burst time for Process %d: ", i + 1);
+        scanf("%d", &burst[i]);
+    }
+
+    // Sort burst times (SJN)
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (burst[j] > burst[j + 1]) {
+                int temp = burst[j];
+                burst[j] = burst[j + 1];
+                burst[j + 1] = temp;
+            }
+        }
+    }
+
+    waiting[0] = 0; // First process has 0 waiting time
+    for (int i = 1; i < n; i++) {
+        waiting[i] = waiting[i - 1] + burst[i - 1];
+    }
+
+    for (int i = 0; i < n; i++) {
+        turnaround[i] = waiting[i] + burst[i];
+        printf("Process %d: Waiting Time = %d, Turnaround Time = %d\n", i + 1, waiting[i], turnaround[i]);
+    }
+
+    return 0;
+}
