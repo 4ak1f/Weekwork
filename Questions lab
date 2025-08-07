@@ -1,0 +1,18 @@
+Scenario: Vehicle Maintenance Log System
+You want to manage a vehicle maintenance log where technicians update service records and queue print jobs for reports. Use stacks to handle undo/redo of log entries and a queue for processing print jobs in order.
+Activity:
+• Define a Stack class with methods: push, pop, peek, is _empty, size.
+• Define a Queue class with methods: enqueue, dequeue, front, is empty, size.
+• Define a VehicleMaintenanceLog class with:
+• Two stacks (undo/redo) and one queue (print jobs).
+• _init_ to initialize empty stacks, queue, and current_log (empty string).
+•
+Methods: add _log(text), undo(), redo(), add print_ job(job),
+process_print_job), display_state().
+Test with:
+• Add logs: "Toyota Camry 2020: Oil Change" and "Honda Civic 2022: Tire
+Rotation"
+• Add print jobs for each log.
+• Undo, add print job "Print summary", redo, process one print job, display state each step.
+
+Hint: Use self for instance attributes; clear redo stack on new log entry.
