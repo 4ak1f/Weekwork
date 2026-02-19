@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+
+    <script>
+        function showWelcome() {
+            var name = document.getElementById("name").value;
+            
+            var newWindow = window.open("", "_blank");
+            newWindow.document.write("<h2>Welcome " + name + "</h2>");
+        }
+
+        function resetName() {
+            document.getElementById("name").value = "Victoria";
+        }
+    </script>
+
+</head>
+<body>
+
+    <h2>Enter Your Name</h2>
+
+    Name:
+    <input type="text" id="name" value="Victoria">
+
+    <br><br>
+
+    <button onclick="showWelcome()">Enter</button>
+    <button onclick="resetName()">Reset</button>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<body>
+
+<table border="1">
+    <tr>
+        <th>Name of the Train</th>
+        <th>Place</th>
+        <th>Destination</th>
+        <th>Train No.</th>
+        <th colspan="2">Time</th>
+        <th>Fair</th>
+    </tr>
+
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Arrival</th>
+        <th>Departure</th>
+        <th></th>
+    </tr>
+
+    <tr>
+        <td>Shatabdi Express</td>
+        <td>Delhi</td>
+        <td>Lucknow</td>
+        <td>12963</td>
+        <td>6:00 AM</td>
+        <td>1:00 PM</td>
+        <td>1500</td>
+    </tr>
+
+    <tr>
+        <td>Rajdhani Express</td>
+        <td>New Delhi</td>
+        <td>Kanpur</td>
+        <td>12856</td>
+        <td>05:00 PM</td>
+        <td>9:10 PM</td>
+        <td>800</td>
+    </tr>
+
+</table>
+
+</body>
+</html>
