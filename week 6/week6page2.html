@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="week6page3.html">
+<input type="hidden" name="n" value="">
+Welcome to ABC.COM<br>
+<input type="submit" value="Next">
+</form>
+<script>
+document.querySelector('input[name="n"]').value=new URLSearchParams(location.search).get('n')
+</script>
+</body>
+</html>

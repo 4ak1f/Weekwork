@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1>Multiplication table</h1>
+<input id="n">
+<button onclick="t()">Show</button>
+<p id="r"></p>
+
+<script>
+function t(){
+n=document.getElementById("n").value
+s=""
+for(i=1;i<=10;i++) s+=n+" x "+i+" = "+n*i+"<br>"
+document.getElementById("r").innerHTML=s
+}
+</script>
+
+</body>
+</html>

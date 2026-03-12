@@ -1,0 +1,17 @@
+<html>
+<body>
+<h2>Enter a date</h2>
+<button onclick="d()">Enter Date</button>
+
+<script>
+function d(){
+x=prompt("Enter date 1-31")
+dt=new Date()
+dt.setDate(x)
+days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+alert(days[dt.getDay()])
+}
+</script>
+
+</body>
+</html>
